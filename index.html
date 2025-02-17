@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Game of Life</h1>
+    </header>
+    <section class="game">
+        <canvas id="canvas"></canvas>
+    </section>
+    <footer class="footer">
+        <div class="speed-controls">
+            <label for="speed" class="speed-value">Game speed:</label>
+            <input type="range" class="speed-slider" id="speed" min="50" max="1000" value="250" step="50">
+            <span id="speedValue" class="speed-value">250ms</span>
+        </div>
+        <div class="control-buttons">
+            <button class="rules">Rules</button>
+            <button class="start">Start</button>
+            <button class="next">Step</button>
+            <button class="delete">Reset</button>
+        </div>
+    </footer>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h2>Правила игры</h2>
+            <p>1. Любая живая клетка c числом соседей меньше 1 и больше 4 умирает.</p>
+            <p>2. Любая живая клетка c числом соседей равное 2 или 3 остается живой на следующем шаге.</p>
+            <p>3. Любая мертвая клетка с ровно тремя живыми соседями становится живой клеткой.</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
